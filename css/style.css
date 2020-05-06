@@ -1,0 +1,162 @@
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f6f6f6
+}
+
+.audio-controls{
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 26px;
+  color: #555;
+  margin-left: 30px;
+}
+.audio-controls i.active{
+  color: #000
+}
+.start,
+.finish{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .9);
+  z-index: 3;
+  display: flex;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+}
+.start .info{
+  text-align: center;
+}
+.start .info h1,
+.finish .info h1{
+  font-size: 80px;
+  color: #e67e22;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  font-family: 'Press Start 2P', cursive;
+}
+.start .info input{
+  width: 400px;
+  display: inline-block;
+  padding: 15px;
+  border: 0;
+  outline: none;
+  font-size: 20px
+}
+.start .info button{
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  padding: 15px 0;
+  text-align: center;
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+  border: none
+}
+
+.finish{
+  transition: opacity .5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 4;
+}
+.finish.show{
+  opacity: 1;
+}
+.finish .info p{
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 10px
+}
+/*start the game*/
+.game-info{
+  width: 80%;
+  margin: 20px auto;
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  border: 1px solid #f0f0f0
+}
+.game-info h3{
+  font-weight: normal;
+}
+.game-info h3 .tries,
+.last-tries{
+  color: #e74c3c
+}
+.game-container{
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.game-container.no-click{
+  pointer-events: none
+}
+.game-container .game-box{
+  border: 1px solid #1abc9c;
+  height: 140px;
+  position: relative;
+  cursor: pointer;
+  transition: transform .5s;
+  transform-style: preserve-3d;
+  flex: 1 0 15%;
+  margin: 15px 2.5%
+}
+.game-container .game-box.is-fliped{
+  transform: rotateY(180deg);
+}
+.game-container .game-box.done{
+  transform: rotateY(180deg);
+  pointer-events: none;
+}
+.game-container .game-box .front{
+  background-color: #34495e;
+  text-align: center;
+}
+.game-container .game-box .front::after{
+  content: '!';
+  text-align: center;
+  font-size: 100px;
+  line-height: 140px;
+  color: #fff;
+}
+.game-container .game-box .back{
+  transform: rotateY(180deg);
+  text-align: center;
+  line-height: 150px;
+  background-color: #fff
+}
+.game-container .game-box .back i{
+  font-size: 60px;
+  color: #34495e
+}
+.game-container .game-box .face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}

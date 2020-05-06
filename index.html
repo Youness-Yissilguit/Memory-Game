@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <audio id="bg-sound" src="sounds/bg.mp3">
+    </audio>
+    <div class="audio-controls">
+      <i class="fas fa-volume-up active"></i>
+      <i class="fas fa-volume-mute"></i>
+    </div>
+    <section class="start">
+      <div class="info">
+        <h1>Memory</h1>
+        <h1>Game</h1>
+        <input type="text" placeholder="Choose a name">
+        <button name="button" class="start-btn">Start The Game</button>
+      </div>
+    </section>
+    <section class="finish">
+      <div class="info">
+        <h1>Game</h1>
+        <h1>Over</h1>
+        <p>You did <span class="last-tries">0</span> Tries</p>
+        <p><i class="fas fa-redo"></i> Reload the page to play again</p>
+      </div>
+    </section>
+
+    <div class="game-info">
+      <h3>Player: <span class="player"></span></h3>
+      <h3>Rong Tries: <span class="tries">0</span></h3>
+    </div>
+
+    <div class="game-container">
+
+      <div class="game-box" data-name="cat">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-cat"></i>
+        </div>
+      </div>
+      <div class="game-box" data-name="cat">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-cat"></i>
+        </div>
+      </div>
+
+      <div class="game-box" data-name="dog">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-dog"></i>
+        </div>
+      </div>
+      <div class="game-box" data-name="dog">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-dog"></i>
+        </div>
+      </div>
+
+      <div class="game-box" data-name="fish">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-fish"></i>
+        </div>
+      </div>
+      <div class="game-box" data-name="fish">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-fish"></i>
+        </div>
+      </div>
+
+      <div class="game-box" data-name="frog">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-frog"></i>
+        </div>
+      </div>
+      <div class="game-box" data-name="frog">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-frog"></i>
+        </div>
+      </div>
+
+      <div class="game-box" data-name="spider">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-spider"></i>
+        </div>
+      </div>
+      <div class="game-box" data-name="spider">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-spider"></i>
+        </div>
+      </div>
+
+      <div class="game-box" data-name="birth">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-crow"></i>
+        </div>
+      </div>
+      <div class="game-box" data-name="birth">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-crow"></i>
+        </div>
+      </div>
+
+      <div class="game-box" data-name="hourse">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-horse"></i>
+        </div>
+      </div>
+      <div class="game-box" data-name="hourse">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-horse"></i>
+        </div>
+      </div>
+
+      <div class="game-box" data-name="hippo">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-hippo"></i>
+        </div>
+      </div>
+      <div class="game-box" data-name="hippo">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-hippo"></i>
+        </div>
+      </div>
+
+      <div class="game-box" data-name="dragon">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-dragon"></i>
+        </div>
+      </div>
+      <div class="game-box" data-name="dragon">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-dragon"></i>
+        </div>
+      </div>
+
+      <div class="game-box" data-name="otter">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-otter"></i>
+        </div>
+      </div>
+      <div class="game-box" data-name="otter">
+        <div class="face front"></div>
+        <div class="face back">
+          <i class="fas fa-otter"></i>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
